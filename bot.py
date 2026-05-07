@@ -394,7 +394,7 @@ async def health_handler(request: web.Request) -> web.Response:
 
 
 async def main():
-    token = os.environ.get("TELEGRAM_BOT_TOKEN")
+    token = os.getenv("BOT_TOKEN")
     if not token:
         raise RuntimeError("Переменная TELEGRAM_BOT_TOKEN не задана!")
 
